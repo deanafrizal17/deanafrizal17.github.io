@@ -45,6 +45,19 @@
             50% { background-position: 100% 100%; }
             100% { background-position: 0% 0%; }
         }
+
+        .profile-card {
+            opacity: 0; /* Start hidden */
+            transform: translateY(20px); /* Start slightly below */
+            animation: fadeInUp 0.8s forwards; /* Animation */
+        }
+
+        @keyframes fadeInUp {
+            to {
+                opacity: 1; /* Fully visible */
+                transform: translateY(0); /* Move to original position */
+            }
+        }
         
         .profile-img {
             width: 120px;
@@ -257,7 +270,6 @@
 <body>
     <div class="bg-gif"></div>
     <div class="profile-card">
-        <div class="slider"></div>
         <img src="inutoge.png" alt="Modern digital avatar of a developer with subtle purple accent colors and futuristic tech elements" class="profile-img">
         
         <h1 class="profile-name">DeanEze</h1>
@@ -403,7 +415,6 @@
                 }
             });
 
-            // Load the first track initially
             // Progress bar functionality
             const progressContainer = document.getElementById('progress-container');
             const progressBar = document.getElementById('progress-bar');
